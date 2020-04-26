@@ -1,7 +1,7 @@
 {
-    "name": "commandblocks",
-    "displayName": "[cyan]Command Blocks[] Mod",
+    "name": "hexadustry",
+    "displayName": "[red]Hexadustry[] Mod",
     "author": "[royal]sk7725[]",
-    "description": "A mod that adds Minecraft-like Command Blocks, and also Note Blocks!\n[royal]Thanks to: 우파루파, 영감[]",
-    "version": "0.29999",
+    "description": "A mod that does...nothing, I swear!",
+    "version": "#FFAA00",
 }
