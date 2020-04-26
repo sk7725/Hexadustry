@@ -10,12 +10,9 @@ const copperwall = extendContent(Wall, "copperwall", {
     Draw.rect(Core.atlas.find(this.name), tile.drawx()+(Math.floor(tile.y)%2)*Vars.tilesize/2, tile.drawy());
   },
   drawPlace(x,y,rotation,valid) {
-    if(valid){
-      Draw.rect(Core.atlas.find(this.name), x+(Math.floor(y)%2)*Vars.tilesize/2, y);
-    }
-    else{
-      this.super$drawPlace(x,y,rotation,valid);
-    }
+
+  Draw.rect(Core.atlas.find(this.name), x+(Math.floor(y)%2)*Vars.tilesize/2, y);
+
   }
   /*
   bounds(x,y,rect){
