@@ -1,0 +1,15 @@
+localizedName: Plastanium Wall
+description: "A special type of wall that absorbs electric arcs and blocks automatic power node connections."
+size: 1
+breakable: true
+//consumesTap: true
+category: defense
+requirements: [
+metaglass/2
+plastanium/6
+]
+health: 760
+solid: true
+targetable: true
+//hasShadow: false
+insulated: true

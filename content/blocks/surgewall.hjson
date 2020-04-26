@@ -1,0 +1,13 @@
+localizedName: Surge Wall
+description: "An extremely durable defensive hexagon. Builds up charge on bullet contact, releasing it randomly."
+size: 1
+breakable: true
+//consumesTap: true
+category: defense
+requirements: [
+surge-alloy/6
+]
+health: 920
+solid: true
+targetable: true
+//hasShadow: false

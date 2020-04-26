@@ -1,0 +1,13 @@
+localizedName: Titanium Wall
+description: "A moderately strong defensive hexagon.\nProvides moderate protection from enemies."
+size: 1
+breakable: true
+//consumesTap: true
+category: defense
+requirements: [
+titanium/6
+]
+health: 440
+solid: true
+targetable: true
+//hasShadow: false

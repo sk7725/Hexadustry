@@ -1,0 +1,13 @@
+localizedName: Phase Wall
+description: "A wall coated with special phase-based reflective compound. Deflects most bullets upon impact."
+size: 1
+breakable: true
+//consumesTap: true
+category: defense
+requirements: [
+phase-fabric/6
+]
+health: 600
+solid: true
+targetable: true
+//hasShadow: false

@@ -1,0 +1,13 @@
+localizedName: Thorium Wall
+description: "A strong defensive hexagon. Decent protection from enemies."
+size: 1
+breakable: true
+//consumesTap: true
+category: defense
+requirements: [
+thorium/6
+]
+health: 800
+solid: true
+targetable: true
+//hasShadow: false
