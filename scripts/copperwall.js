@@ -1,8 +1,10 @@
 
 const copperwall = extendContent(Wall, "copperwall", {
   draw(tile) {
+    Fill.rect(tile.drawx()+(Math.floor(tile.y)%2)*Vars.tilesize/2+0.5, tile.drawy()+0.5, 1, 1);
     Draw.rect(Core.atlas.find(this.name), tile.drawx()+(Math.floor(tile.y)%2)*Vars.tilesize/2, tile.drawy());
-  },
+  }
+  /*
   bounds(x,y,rect){
     try{
       return rect.setSize(this.size * Vars.tilesize).setCenter(x * Vars.tilesize +(Math.floor(y)%2)*Vars.tilesize/2+ this.offset(), y * Vars.tilesize + this.offset());
@@ -12,4 +14,5 @@ const copperwall = extendContent(Wall, "copperwall", {
       this.super$bounds(x,y,rect);
     }
   }
+  */
 });

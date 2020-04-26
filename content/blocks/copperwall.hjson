@@ -10,3 +10,4 @@ copper/6
 health: 320
 solid: true
 targetable: true
+hasShadow: false
