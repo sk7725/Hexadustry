@@ -1,4 +1,4 @@
-localizedName: Copper Wall
+name: Copper Wall
 description: "A cheap defensive hexagon.\nUseful for protecting the core and turrets in the first few waves."
 size: 1
 breakable: true

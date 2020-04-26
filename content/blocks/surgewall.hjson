@@ -1,4 +1,4 @@
-localizedName: Surge Wall
+name: Surge Wall
 description: "An extremely durable defensive hexagon. Builds up charge on bullet contact, releasing it randomly."
 size: 1
 breakable: true

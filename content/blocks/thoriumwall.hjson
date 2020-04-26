@@ -1,4 +1,4 @@
-localizedName: Thorium Wall
+name: Thorium Wall
 description: "A strong defensive hexagon. Decent protection from enemies."
 size: 1
 breakable: true

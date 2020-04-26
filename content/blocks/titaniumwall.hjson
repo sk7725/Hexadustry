@@ -1,4 +1,4 @@
-localizedName: Titanium Wall
+name: Titanium Wall
 description: "A moderately strong defensive hexagon.\nProvides moderate protection from enemies."
 size: 1
 breakable: true

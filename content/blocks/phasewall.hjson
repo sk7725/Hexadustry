@@ -1,4 +1,4 @@
-localizedName: Phase Wall
+name: Phase Wall
 description: "A wall coated with special phase-based reflective compound. Deflects most bullets upon impact."
 size: 1
 breakable: true

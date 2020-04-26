@@ -1,4 +1,4 @@
-localizedName: Plastanium Wall
+name: Plastanium Wall
 description: "A special type of wall that absorbs electric arcs and blocks automatic power node connections."
 size: 1
 breakable: true
