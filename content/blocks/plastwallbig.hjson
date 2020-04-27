@@ -1,0 +1,15 @@
+name: Large Plastanium Wall
+description: "A special type of wall that absorbs electric arcs and blocks automatic power node connections.\nSpans multiple tiles."
+size: 2
+breakable: true
+//consumesTap: true
+category: defense
+requirements: [
+metaglass/8
+plastanium/20
+]
+health: 3040
+solid: true
+targetable: true
+//hasShadow: false
+insulated: true

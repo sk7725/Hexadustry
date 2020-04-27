@@ -1,0 +1,13 @@
+name: Large Titanium Wall
+description: "A moderately strong defensive hexagon.\nProvides moderate protection from enemies.\nSpans multiple tiles."
+size: 2
+breakable: true
+//consumesTap: true
+category: defense
+requirements: [
+titanium/24
+]
+health: 1760
+solid: true
+targetable: true
+//hasShadow: false

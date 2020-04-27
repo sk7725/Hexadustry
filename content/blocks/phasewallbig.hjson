@@ -1,0 +1,13 @@
+name: Large Phase Wall
+description: "A wall coated with special phase-based reflective compound. Deflects most bullets upon impact.\nSpans multiple tiles."
+size: 2
+breakable: true
+//consumesTap: true
+category: defense
+requirements: [
+phase-fabric/24
+]
+health: 2400
+solid: true
+targetable: true
+//hasShadow: false

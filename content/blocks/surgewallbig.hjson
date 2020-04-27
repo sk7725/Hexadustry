@@ -1,0 +1,13 @@
+name: Large Surge Wall
+description: "An extremely durable defensive hexagon. Builds up charge on bullet contact, releasing it randomly.\nSpans multiple tiles."
+size: 2
+breakable: true
+//consumesTap: true
+category: defense
+requirements: [
+surge-alloy/24
+]
+health: 3680
+solid: true
+targetable: true
+//hasShadow: false

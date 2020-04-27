@@ -1,0 +1,13 @@
+name: Large Thorium Wall
+description: "A strong defensive hexagon. Decent protection from enemies.\nSpans multiple tiles."
+size: 2
+breakable: true
+//consumesTap: true
+category: defense
+requirements: [
+thorium/24
+]
+health: 3200
+solid: true
+targetable: true
+//hasShadow: false
