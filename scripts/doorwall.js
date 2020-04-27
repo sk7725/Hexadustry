@@ -28,10 +28,15 @@ const doorwall = extendContent(Door, "doorwall", {
     }
   },
   tapped(tile,player){
-    var entity = tile.ent();
-    if((Units.anyEntities(tile) && entity.open) || !tile.entity.timer.get(0, 30)){
-      return;
+    try{
+      var entity = tile.ent();
+      if((Units.anyEntities(tile) && entity.open) || !tile.entity.timer.get(0, 30)){
+        return;
+      }
+      Call.onHexDoorToggle(null, tile, !entity.open);
     }
-    Call.onHexDoorToggle(null, tile, !entity.open);
+    catch(err){
+      print(err);
+    }
   }
 });
