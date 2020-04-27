@@ -1,0 +1,15 @@
+name: Door
+description: "A small door. Can be opened or closed by tapping."
+size: 1
+breakable: true
+consumesTap: true
+category: defense
+requirements: [
+graphite/6
+silicon/4
+]
+health: 400
+solid: false
+solidifies: true
+targetable: true
+//hasShadow: false
