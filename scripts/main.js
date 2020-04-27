@@ -1,4 +1,5 @@
 require("copperwall");
+require("copperwallbig");
 require("titaniumwall");
 require("plastwall");
 require("thoriumwall");
