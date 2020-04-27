@@ -1,9 +1,9 @@
 const shadowcolor=new Color(0,0,0,0.71);
 const copperwallbig = extendContent(Wall, "copperwallbig", {
   draw(tile) {
-    var shift=false;
-    if(Math.floor(tile.y)%2==2) shift=true;
-    Draw.rect(Core.atlas.find(this.name+(shift)?"-1":""), tile.drawx()+Vars.tilesize/4, tile.drawy());
+    var shift="";
+    if(Math.floor(tile.y)%2==2) shift="-1";
+    Draw.rect(Core.atlas.find(this.name+shift), tile.drawx()+Vars.tilesize/4, tile.drawy());
   },
   getRequestRegion(req, list){
     return this.icon(Cicon.full);
@@ -11,9 +11,9 @@ const copperwallbig = extendContent(Wall, "copperwallbig", {
   drawRequestRegion(req, list){
     //print("req start");
     var reg = this.getRequestRegion(req, list);
-    var shift=false;
-    if(Math.floor(req.drawy()/Vars.tilesize)%2==2) shift=true;
-    Draw.rect(Core.atlas.find(this.name+(shift)?"-0":""), req.drawx()+Vars.tilesize/4, req.drawy(),
+    var shift="";
+    if(Math.floor(req.drawy()/Vars.tilesize)%2==2) shift="-1";
+    Draw.rect(Core.atlas.find(this.name+shift), req.drawx()+Vars.tilesize/4, req.drawy(),
     reg.getWidth() * req.animScale * Draw.scl,
     reg.getHeight() * req.animScale * Draw.scl,
     !this.rotate ? 0 : req.rotation * 90);
