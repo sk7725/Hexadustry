@@ -13,3 +13,4 @@ solid: false
 solidifies: true
 targetable: true
 //hasShadow: false
+timers: 1

@@ -13,7 +13,7 @@ const doorwall = extendContent(Door, "doorwall", {
   draw(tile) {
     Draw.rect(Core.atlas.find(this.name+((tile.ent().open)?"-open":"")), tile.drawx()+(Math.floor(tile.y)%2)*Vars.tilesize/2, tile.drawy());
   },
-  onDoorToggle(player,tile,open){
+  onHexDoorToggle(player,tile,open){
     var entity=tile.ent();
     if(entity != null){
       entity.open = open;
@@ -26,5 +26,12 @@ const doorwall = extendContent(Door, "doorwall", {
       }
       Sounds.door.at(tile);
     }
+  },
+  tapped(tile,player){
+    var entity = tile.ent();
+    if((Units.anyEntities(tile) && entity.open) || !tile.entity.timer.get(0, 30)){
+      return;
+    }
+    Call.onHexDoorToggle(null, tile, !entity.open);
   }
 });
