@@ -2,7 +2,7 @@ const shadowcolor=new Color(0,0,0,0.71);
 const copperwall = extendContent(Wall, "copperwall", {
   draw(tile) {
     Draw.rect(Core.atlas.find(this.name), tile.drawx()+(Math.floor(tile.y)%2)*Vars.tilesize/2, tile.drawy());
-  }.
+  },
   getRequestRegion(req, list){
     try{
       var geticon=this.icon(Cicon.full);
