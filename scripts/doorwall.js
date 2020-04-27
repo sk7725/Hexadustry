@@ -20,9 +20,9 @@ const doorwall = extendContent(Door, "doorwall", {
 
       //pathfinder.updateTile(tile);
       if(!entity.open){
-          Effects.effect(hexdooropen, tile.drawx()+(Math.floor(tile.y)%2)*Vars.tilesize/2, tile.drawy());
+          Effects.effect(hexdooropen, tile.drawx()+(Math.floor(tile.y)%2)*Vars.tilesize/2, tile.drawy(),90);
       }else{
-          Effects.effect(hexdoorclose, tile.drawx()+(Math.floor(tile.y)%2)*Vars.tilesize/2, tile.drawy());
+          Effects.effect(hexdoorclose, tile.drawx()+(Math.floor(tile.y)%2)*Vars.tilesize/2, tile.drawy(),90);
       }
       Sounds.door.at(tile);
     }
