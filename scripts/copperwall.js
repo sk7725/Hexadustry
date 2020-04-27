@@ -22,6 +22,10 @@ const copperwall = extendContent(Wall, "copperwall", {
       print("E: "+err);
     }*/
   },
+  bounds(x, y, rect){
+    var offset=Math.floor(y/Vars.tilesize)*Vars.tilesize/2;
+    return rect.setSize(this.size * Vars.tilesize).setCenter(x * Vars.tilesize + offset, y * Vars.tilesize);
+  },
   drawRequestRegion(req, list){
     print("req start");
     var reg = this.getRequestRegion(req, list);
