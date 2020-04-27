@@ -2,7 +2,7 @@ const shadowcolor=new Color(0,0,0,0.71);
 const tilesize=Vars.tilesize;
 const hexdooropen=newEffect(10, e => {
     Lines.stroke(e.fout() * 1.6);
-    Lines.poly(e.x, e.y,6, tilesize / 2 + e.fin() * 2,90);
+    Lines.poly(e.x, e.y,6, tilesize / 2 + e.fin() * 2);
 });
 const hexdoorclose=newEffect(10, e => {
     Lines.stroke(e.fout() * 1.6);
