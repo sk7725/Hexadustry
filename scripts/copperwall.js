@@ -23,7 +23,7 @@ const copperwall = extendContent(Wall, "copperwall", {
     }*/
   },
   bounds(x, y, rect){
-    var offset=(Math.floor(y/Vars.tilesize)%2)*Vars.tilesize/2;
+    var offset=(y%2)*Vars.tilesize/2;
     print("bounds start");
     print("x: "+x+" y: "+y+" offset: "+offset);
     return rect.setSize(this.size * Vars.tilesize).setCenter(x * Vars.tilesize + offset, y * Vars.tilesize);
@@ -39,5 +39,11 @@ const copperwall = extendContent(Wall, "copperwall", {
     if(req.hasConfig){
       this.drawRequestConfig(req, list);
     }
+  },
+  drawTeam(tile){
+    Draw.color(tile.getTeam().color);
+    Draw.rect("block-border", tile.drawx() - this.size * Vars.tilesize / 2 + 4+(Math.floor(tile.y)%2)*Vars.tilesize/2, tile.drawy() - this.size * Vars.tilesize / 2 + 4);
+    Draw.color();
   }
+
 });
