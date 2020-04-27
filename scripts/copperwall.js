@@ -23,7 +23,7 @@ const copperwall = extendContent(Wall, "copperwall", {
     }*/
   },
   bounds(x, y, rect){
-    var offset=Math.floor(y/Vars.tilesize)*Vars.tilesize/2;
+    var offset=(Math.floor(y/Vars.tilesize)%2)*Vars.tilesize/2;
     print("bounds start");
     print("x: "+x+" y: "+y+" offset: "+offset);
     return rect.setSize(this.size * Vars.tilesize).setCenter(x * Vars.tilesize + offset, y * Vars.tilesize);
