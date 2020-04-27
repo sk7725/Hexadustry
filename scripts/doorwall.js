@@ -18,7 +18,7 @@ const doorwall = extendContent(Door, "doorwall", {
     if(entity != null){
       entity.open = open;
 
-      pathfinder.updateTile(tile);
+      //pathfinder.updateTile(tile);
       if(!entity.open){
           Effects.effect(hexdooropen, tile.drawx()+(Math.floor(tile.y)%2)*Vars.tilesize/2, tile.drawy());
       }else{
