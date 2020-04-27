@@ -3,8 +3,9 @@ const copperwall = extendContent(Wall, "copperwall", {
   draw(tile) {
     Draw.rect(Core.atlas.find(this.name), tile.drawx()+(Math.floor(tile.y)%2)*Vars.tilesize/2, tile.drawy());
   },
-  /*
   getRequestRegion(req, list){
+    return this.icon(Cicon.full);
+    /*
     print("req start");
     try{
       var geticon=this.icon(Cicon.full);
@@ -19,12 +20,11 @@ const copperwall = extendContent(Wall, "copperwall", {
     }
     catch(err){
       print("E: "+err);
-    }
+    }*/
   },
-  */
   drawRequestRegion(req, list){
     print("req start");
-    var reg = this.super$getRequestRegion(req, list);
+    var reg = this.getRequestRegion(req, list);
     Draw.rect(reg, req.drawx()+(Math.floor(req.drawy()/Vars.tilesize)%2)*Vars.tilesize/2, req.drawy(),
     reg.getWidth() * req.animScale * Draw.scl,
     reg.getHeight() * req.animScale * Draw.scl,
