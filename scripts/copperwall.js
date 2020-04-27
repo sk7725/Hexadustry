@@ -5,22 +5,6 @@ const copperwall = extendContent(Wall, "copperwall", {
   },
   getRequestRegion(req, list){
     return this.icon(Cicon.full);
-    /*
-    print("req start");
-    try{
-      var geticon=this.icon(Cicon.full);
-      var y=Math.floor(geticon.getY()/Vars.tilesize);
-      print("Y: "+y);
-      if(y%2==1){
-        return geticon.scroll(0.5,0);
-      }
-      else{
-        return geticon;
-      }
-    }
-    catch(err){
-      print("E: "+err);
-    }*/
   },
   bounds(x, y, rect){
     var offset=(y%2)*Vars.tilesize/2;
@@ -44,6 +28,16 @@ const copperwall = extendContent(Wall, "copperwall", {
     Draw.color(tile.getTeam().color);
     Draw.rect("block-border", tile.drawx() - this.size * Vars.tilesize / 2 + 4+(Math.floor(tile.y)%2)*Vars.tilesize/2, tile.drawy() - this.size * Vars.tilesize / 2 + 4);
     Draw.color();
+  },
+  doclamp(x,mi,ma){
+    return Math.max(mi,Math.min(x,ma));
+  },
+  drawCracks(tile){
+    if(!tile.entity.damaged()) return;
+    var id = tile.pos();
+    var region = this.cracks[this.size - 1][this.doclamp(Math.floor((1 - tile.entity.healthf()) * this.crackRegions), 0, this.crackRegions-1)];
+    Draw.colorl(0.2, 0.1 + (1 - tile.entity.healthf())* 0.6);
+    Draw.rect(region, tile.drawx(), tile.drawy(), (id%4)*90);
+    Draw.color();
   }
-
 });
