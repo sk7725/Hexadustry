@@ -2,11 +2,11 @@ const shadowcolor=new Color(0,0,0,0.71);
 const tilesize=Vars.tilesize;
 const hexdooropen=newEffect(10, e => {
     Lines.stroke(e.fout() * 1.6);
-    Lines.poly(e.x, e.y,6, tilesize / 2 + e.fin() * 2);
+    Lines.poly(e.x, e.y,6, tilesize / 2 + e.fin() * 2,Vars.tilesize/2,90);
 });
 const hexdoorclose=newEffect(10, e => {
     Lines.stroke(e.fout() * 1.6);
-    Lines.poly(e.x, e.y,6, tilesize / 2 + e.fout() * 2,90);
+    Lines.poly(e.x, e.y,6, tilesize / 2 + e.fout() * 2,Vars.tilesize/2,90);
 });
 
 const doorwall = extendContent(Door, "doorwall", {
@@ -20,9 +20,9 @@ const doorwall = extendContent(Door, "doorwall", {
 
       //pathfinder.updateTile(tile);
       if(!entity.open){
-          hexdooropen.at(tile.drawx()+(Math.floor(tile.y)%2)*Vars.tilesize/2, tile.drawy(),90);
+          Effects.effect(hexdooropen, tile.drawx()+(Math.floor(tile.y)%2)*Vars.tilesize/2, tile.drawy());
       }else{
-          hexdoorclose.at(tile.drawx()+(Math.floor(tile.y)%2)*Vars.tilesize/2, tile.drawy(),90);
+          Effects.effect(hexdoorclose, tile.drawx()+(Math.floor(tile.y)%2)*Vars.tilesize/2, tile.drawy());
       }
       Sounds.door.at(tile);
     }

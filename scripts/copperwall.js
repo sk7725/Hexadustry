@@ -6,12 +6,13 @@ const copperwall = extendContent(Wall, "copperwall", {
   getRequestRegion(req, list){
     return this.icon(Cicon.full);
   },
+  /*
   bounds(x, y, rect){
     var offset=(y%2)*Vars.tilesize/2;
     print("bounds start");
     print("x: "+x+" y: "+y+" offset: "+offset);
     return rect.setSize(this.size * Vars.tilesize).setCenter(x * Vars.tilesize + offset, y * Vars.tilesize);
-  },
+  },*/
   drawRequestRegion(req, list){
     //print("req start");
     var reg = this.getRequestRegion(req, list);
@@ -37,7 +38,7 @@ const copperwall = extendContent(Wall, "copperwall", {
     var id = tile.pos();
     var region = this.cracks[this.size - 1][this.doclamp(Math.floor((1 - tile.entity.healthf()) * this.crackRegions), 0, this.crackRegions-1)];
     Draw.colorl(0.2, 0.1 + (1 - tile.entity.healthf())* 0.6);
-    Draw.rect(region, tile.drawx(), tile.drawy(), (id%4)*90);
+    Draw.rect(region, tile.drawx()+(Math.floor(tile.y)%2)*Vars.tilesize/2, tile.drawy(), (id%4)*90);
     Draw.color();
   }
 });
