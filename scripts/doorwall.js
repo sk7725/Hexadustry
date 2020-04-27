@@ -2,11 +2,11 @@ const shadowcolor=new Color(0,0,0,0.71);
 const tilesize=Vars.tilesize;
 const hexdooropen=newEffect(10, e => {
     Lines.stroke(e.fout() * 1.6);
-    Lines.poly(e.x, e.y,6, tilesize / 2 + e.fin() * 2);
+    Lines.poly(e.x, e.y,6, tilesize / 2 + e.fin() * 2,90);
 });
 const hexdoorclose=newEffect(10, e => {
     Lines.stroke(e.fout() * 1.6);
-    Lines.poly(e.x, e.y,6, tilesize / 2 + e.fout() * 2);
+    Lines.poly(e.x, e.y,6, tilesize / 2 + e.fout() * 2,90);
 });
 
 const doorwall = extendContent(Door, "doorwall", {
