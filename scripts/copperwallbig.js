@@ -2,7 +2,7 @@ const shadowcolor=new Color(0,0,0,0.71);
 const copperwallbig = extendContent(Wall, "copperwallbig", {
   draw(tile) {
     var shift="";
-    if(Math.floor(tile.y)%2==2) shift="-1";
+    if(Math.floor(tile.y)%2==1) shift="-1";
     Draw.rect(Core.atlas.find(this.name+shift), tile.drawx()+Vars.tilesize/4, tile.drawy());
   },
   getRequestRegion(req, list){
@@ -12,7 +12,7 @@ const copperwallbig = extendContent(Wall, "copperwallbig", {
     //print("req start");
     var reg = this.getRequestRegion(req, list);
     var shift="";
-    if(Math.floor(req.drawy()/Vars.tilesize)%2==2) shift="-1";
+    if(Math.floor(req.drawy()/Vars.tilesize)%2==1) shift="-1";
     Draw.rect(Core.atlas.find(this.name+shift), req.drawx()+Vars.tilesize/4, req.drawy(),
     reg.getWidth() * req.animScale * Draw.scl,
     reg.getHeight() * req.animScale * Draw.scl,
