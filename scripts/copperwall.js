@@ -24,7 +24,7 @@ const copperwall = extendContent(Wall, "copperwall", {
   */
   drawRequestRegion(req, list){
     print("req start");
-    var reg = this.getRequestRegion(req, list);
+    var reg = this.super$getRequestRegion(req, list);
     Draw.rect(reg, req.drawx()+(Math.floor(req.drawy()/Vars.tilesize)%2)*Vars.tilesize/2, req.drawy(),
     reg.getWidth() * req.animScale * Draw.scl,
     reg.getHeight() * req.animScale * Draw.scl,
