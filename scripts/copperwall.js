@@ -19,5 +19,16 @@ const copperwall = extendContent(Wall, "copperwall", {
     catch(err){
       print("E: "+err);
     }
+  },
+  drawRequestRegion(req, list){
+    var reg = this.getRequestRegion(req, list);
+    Draw.rect(reg, req.drawx(), req.drawy(),
+    reg.getWidth() * req.animScale * Draw.scl,
+    reg.getHeight() * req.animScale * Draw.scl,
+    !this.rotate ? 0 : req.rotation * 90);
+
+    if(req.hasConfig){
+      this.drawRequestConfig(req, list);
+    }
   }
 });
