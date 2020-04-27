@@ -3,6 +3,9 @@ const titaniumwall = extendContent(Wall, "titaniumwall", {
   draw(tile) {
     Draw.rect(Core.atlas.find(this.name), tile.drawx()+(Math.floor(tile.y)%2)*Vars.tilesize/2, tile.drawy());
   },
+  getRequestRegion(req, list){
+    return this.icon(Cicon.full);
+  },
   drawRequestRegion(req, list){
     var reg = this.getRequestRegion(req, list);
     Draw.rect(reg, req.drawx()+(Math.floor(req.drawy()/Vars.tilesize)%2)*Vars.tilesize/2, req.drawy(),
