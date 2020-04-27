@@ -9,7 +9,7 @@ const hexdoorclose=newEffect(10, e => {
     Lines.poly(e.x, e.y,6, tilesize / 2 + e.fout() * 2);
 });
 
-const door = extendContent(Door, "door", {
+const doorwall = extendContent(Door, "doorwall", {
   draw(tile) {
     Draw.rect(Core.atlas.find(this.name+((tile.ent().open)?"-open":"")), tile.drawx()+(Math.floor(tile.y)%2)*Vars.tilesize/2, tile.drawy());
   },

@@ -4,4 +4,4 @@ require("plastwall");
 require("thoriumwall");
 require("phasewall");
 require("surgewall");
-require("door");
+require("doorwall");
