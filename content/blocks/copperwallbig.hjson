@@ -1,6 +1,6 @@
 name: Large Copper Wall
 description: "A cheap defensive hexagon.\nUseful for protecting the core and turrets in the first few waves. Spans multiple tiles."
-size: 1
+size: 2
 breakable: true
 //consumesTap: true
 category: defense
